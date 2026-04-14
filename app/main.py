@@ -5,11 +5,11 @@ class Car:
         clean_mark: int,
         brand: str
     ) -> None:
-        if not 0 < comfort_class < 8:
+        if not 1 <= comfort_class <= 7:
             raise ValueError("comfort_class must be from 1 to 7")
         self.comfort_class = comfort_class
-        if not 0 < clean_mark < 11:
-            raise ValueError("clean_mark must be from 0 to 11")
+        if not 1 <= clean_mark <= 10:
+            raise ValueError("clean_mark must be from 1 to 10")
         self.clean_mark = clean_mark
         self.brand = brand
 
@@ -22,13 +22,13 @@ class CarWashStation:
         average_rating: float,
         count_of_ratings: int
     ) -> None:
-        if not 0 < distance_from_city_center < 11:
+        if not 1.0 <= distance_from_city_center <= 10.0:
             raise ValueError("distance must be from 1.0 to 10.0")
         self.distance_from_city_center = distance_from_city_center
-        if not 0 < clean_power < 11:
+        if not 1 <= clean_power <= 10:
             raise ValueError("clean_power must be from 1.0 to 10.0 ")
         self.clean_power = clean_power
-        if not 0.9 < average_rating < 5.1:
+        if not 1 <= average_rating <= 5.0:
             raise ValueError("rating must be from 1.0 to 5.0")
         self.average_rating = round(average_rating, 1)
         self.count_of_ratings = count_of_ratings
